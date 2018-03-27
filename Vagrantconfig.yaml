@@ -1,0 +1,24 @@
+---
+synced_directories:
+    vagrant:
+        from: '.'
+        to: '/vagrant'
+provisioners:
+    shell:
+        init:
+            path: 'box-init.sh'
+        create_db:
+            path: 'create-db.sh'
+boxes:
+    test:
+        enabled: true
+        provider: 'virtualbox'
+        box_url : 'https://atlas.hashicorp.com/ubuntu/boxes/xenial64'
+        box_name: 'ubuntu/xenial64'
+        hostname: 'vag-onecall-test'
+        host_ip: '192.168.33.10'
+        memory: 512
+        synced_directories:
+            portal-app:
+                from: './app'
+                to: '/var/www/html'

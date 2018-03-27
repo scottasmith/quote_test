@@ -1,0 +1,17 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Customer Details{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>
+            Thankyou for submitting the form
+        </h1>
+        <small>This is split to show the additions for age and car</small>
+
+        <h4>The premium is: &pound{{ flashMessages.getFlash('premium', 0) }}</h4>
+        {% if flashMessages.getFlash('additionalPremium', 0) > 0 %}
+        <h4>Additional Premium: &pound{{ flashMessages.getFlash('additionalPremium', 0) }}
+        {% endif %}
+    </div>
+{% endblock %}

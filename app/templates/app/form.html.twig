@@ -1,0 +1,92 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block title %}Customer Details{% endblock %}
+
+{% block content %}
+    <form method="post" action="/form/post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="customerName">Name</label>
+                    <input type="text" class="form-control" id="customerName" name="customer[name]">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="customerDob">Your DOB</label>
+                    <input type="date" class="form-control" id="customerDob" name="customer[dob]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="drivingLicense">You driving license number</label>
+                    <input type="text" class="form-control" id="drivingLicense" name="customer[licenseNumber]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="addr1">Address 1</label>
+                    <input type="text" class="form-control" id="addr1" name="address[line1]">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="addr2">Address 2</label>
+                    <input type="test" class="form-control" id="addr2" name="address[line2]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="town">Town</label>
+                    <input type="test" class="form-control" id="town" name="address[town]">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="postcode">Postcode</label>
+                    <input type="test" class="form-control" id="postcode" name="address[postcode]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="carReg">Car Registration Number</label>
+                    <input type="test" class="form-control" id="carReg" name="car[registration]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="carMake">Car Make</label>
+                    <input type="test" class="form-control" id="carMake" name="car[make]">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="carModel">Car Model</label>
+                    <input type="test" class="form-control" id="carModel" name="car[model]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary float-right">Submit Details</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
